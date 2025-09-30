@@ -1,1 +1,304 @@
-HELLO WORLD
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="STREAM: Learning for Collision-Free Docking in Cluttered Environments - An end-to-end RL framework for robust underwater docking in dynamic flows.">
+  <meta property="og:title" content="STREAM: Learning for Collision-Free Docking in Cluttered Environments"/>
+  <meta property="og:description" content="STREAM leverages proprioception and temporal dynamics abstraction for robust underwater docking in dynamic flows and cluttered environments."/>
+  <meta property="og:url" content="https://stream-icra26.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/framework.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="STREAM: Learning for Collision-Free Docking in Cluttered Environments">
+  <meta name="twitter:description" content="End-to-end RL framework for collision-free underwater docking using temporal dynamics abstraction and proprioceptive history encoding.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/framework.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="STREAM, reinforcement learning, underwater docking, temporal dynamics abstraction, proprioception, flow fields, cluttered environments, collision avoidance, AUV, UUV">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>STREAM: Learning for Collision-Free Docking in Cluttered Environments</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "qrp9416oo4");
+</script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">STREAM: Learning for Collision-Free Docking in Cluttered Environments</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Authors and institutions removed for double-blind review -->
+              <span class="author-block">Anonymous Submission</span>
+            </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Github link -->
+              <!-- <span class="link-block">
+                <a href="#" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code(Coming soon)</span>
+              </a>
+              </span> -->
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="#" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>Paper (Under Review)</span>
+              </a>
+            </span>
+
+            </div>
+          </div>
+
+     
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/demo.mp4"
+        type="video/mp4">
+      </video>
+      <!-- <h2 class="subtitle has-text-centered">
+        STREAM: Collision-free docking demonstration in cluttered environments with dynamic flows
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            To achieve long-term autonomy in marine robotics, it is fundamental to solve the docking problem. However, docking remains a challenging problem due to limited observability and current disturbances, especially in cluttered environments. We present STREAM, an end-to-end RL framework to achieve robust docking in dynamic flows and cluttered environments. The temporal dynamics abstraction module is designed to encode proprioceptive history, capturing latent flow influences and supporting robust policy learning. A scalable 3D environment with configurable flow fields, cluttered geometries, and parallel training is developed to support and evaluate STREAM at over 30,000 steps per second. Experiments across static, time-invariant, and time-varying flow environments show that STREAM consistently outperforms baselines, attaining higher success rates, shorter trajectories, and more stable training dynamics. Generalization studies and experiments show that STREAM outperforms PPO-based baselines, achieving success rates above 90% in dynamic flows.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/framework_b2.jpg" alt="Example trajectory in cluttered pillar-world environment"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Platform Overview -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Framework Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>STREAM</strong> is an end-to-end RL framework for collision-free docking in cluttered and flowing environments. This work consists of three contributions: (i) a RL framework for collision-free underwater docking in cluttered environments with dynamic flows. (ii) a Temporal Dynamics Abstraction (TDA) module that transforms recent proprioceptive states into a compact latent vector, and (iii) a scaleable parallel simulation environment running 2048 agents at above 30,000 frames per second.
+          </p>
+        <div class="has-text-centered">
+            <img src="static/images/framework.jpg" alt="STREAM Framework Overview"/>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Platform Overview -->
+
+
+
+<!-- Benchmarking -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Setup</h2>
+        <div class="content has-text-justified">
+          <p>
+            STREAM employs a four-stage <strong>curriculum learning</strong> strategy to enable stable learning under increasing complexity. Training begins at Level 1 with static obstacles and no flow, progresses to Level 2 with flow introduction, and advances to Levels 3-4 with increased obstacle density (75 and 125 obstacles respectively). This progressive complexity allows the agent to master fundamental docking skills before facing more challenging scenarios.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/cl_v2.jpg" alt="Curriculum Learning Environments"/>
+            <p><em>Four-stage curriculum learning with progressive obstacle density increase (Levels 1-4)</em></p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Benchmarking -->
+
+<!-- Benchmarking -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Training Performance</h2>
+        <div class="content has-text-justified">
+          <p>
+            The training results demonstrate STREAM's performance compared to baselines. In both time-invariant (TI) and time-varying (TV) flow environments, STREAM achieves faster convergence, maintains lower cumulative error, and sustains success rates above 90%. The curriculum learning approach proves essential for stable policy development, particularly in dynamic flow conditions where convergence without curriculum becomes significantly more challenging.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/exp2_training_results_TI.png" alt="Training Results TI"/>
+            <p><em>Training performance comparison in Time-Invariant flow environment</em></p><br>
+            <img src="static/images/exp2_training_results_TV.png" alt="Training Results TV"/>
+            <p><em>Training performance comparison in Time-Varying flow environment</em></p>
+          </div>
+          <br>
+          <p>
+            STREAM demonstrates trajectory planning capabilities in both time-invariant and time-varying flow environments. The system learns to exploit flow structure for efficient docking while maintaining collision-free navigation through cluttered obstacle fields. Green trajectories indicate successful docking trials, while red trajectories show failure cases, with flow streamlines illustrating the double-gyre field dynamics.
+          </p>
+
+          <div class="has-text-centered">
+            <img src="static/images/ti.png" alt="TI Environment Trajectories"/>
+            <p><em>Docking trajectories in Time-Invariant flow environment with obstacle avoidance</em></p><br>
+            <img src="static/images/tv.png" alt="TV Environment Trajectories"/>
+            <p><em>Docking trajectories in Time-Varying flow environment</em></p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Benchmarking -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Ablation Studies</h2>
+        <div class="content has-text-justified">
+          <p>
+            To further assess the contribution of the proposed TDA module, we conduct ablation studies under different flow field settings. All ablation studies are conducted at obstacle density 125 and curriculum learning disabled, so that the impact of TDA can be directly assessed. In the time-invariant (TI) environment, without TDA (0 steps), training is unstable, and the success rate rarely exceeds 0.3. When the steps are limited to 3, training exhibits high variance, and the success rate stays below 0.5. Increasing the steps to 6 improves stability; however, the final success rate levels off near 0.6. With 10 steps, the outcomes are the most consistent since returns increase monotonically, errors converge below 5 m, and the success rate exceeds 0.7 with reduced variance across runs.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/ablation_ti_final.png" alt="TI Environment Ablation Study"/>
+            <p><em>Ablation on temporal step length (K=0,3,6,10) in Time-Invariant flow environment</em></p><br>
+            <img src="static/images/ablation_tv_final.png" alt="TV Environment Ablation Study"/>
+            <p><em>Ablation on temporal step length (K=0,3,6,10) in Time-Varying flow environment</em></p>
+          </div>
+          <br>
+          <p>
+            In the time-varying (TV) environment, short horizons lead to unstable training, larger errors, and low success rates, whereas increasing the horizon improves stability and raises performance. Using 10 steps yields the most consistent results, with lower final errors and higher success rates compared to 3 and 6 steps. The ablation confirms that TDA contributes to a more adaptive docking performance, while its effectiveness depends on selecting an appropriate number of steps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Results Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generalization Studies</h2>
+        <div class="content has-text-justified">
+          <p>
+            In generalization tests involving multi-target docking scenarios, STREAM consistently outperforms baseline methods. The policy successfully navigates through complex waypoint sequences, achieving shorter path lengths, higher directness ratios, and zero minimum clearance distances. This demonstrates the framework's ability to adapt its learned behaviors to unseen target configurations and varying environmental conditions.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/multi_algorithm_trajectories_TI.png" alt="Multi-target TI"/>
+            <p><em>Multi-target trajectory comparison in TI environment: STREAM vs baseline</em></p><br>
+            <img src="static/images/multi_algorithm_trajectories_TV.png" alt="Multi-target TV"/>
+            <p><em>Multi-target trajectory comparison in TV environment</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{anonymous_2025_STREAM,
+        title = {STREAM: Learning for Collision-Free Docking in Cluttered Environments},
+        author = {Anonymous},
+        year = {2025},
+        note = {Submitted for review}
+      }</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.<br><br>
+            <strong>Supplementary materials and videos available at: <a href="https://stream-icra26.github.io/" target="_blank">https://stream-icra26.github.io/</a></strong>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
