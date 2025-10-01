@@ -126,9 +126,9 @@
           <p>
             To achieve long-term autonomy in marine robotics, it is fundamental to solve the docking problem. However, docking remains a challenging problem due to limited observability and current disturbances, especially in cluttered environments. We present STREAM, an end-to-end RL framework to achieve robust docking in dynamic flows and cluttered environments. The temporal dynamics abstraction module is designed to encode proprioceptive history, capturing latent flow influences and supporting robust policy learning. A scalable 3D environment with configurable flow fields, cluttered geometries, and parallel training is developed to support and evaluate STREAM at over 30,000 steps per second. Experiments across static, time-invariant, and time-varying flow environments show that STREAM consistently outperforms baselines, attaining higher success rates, shorter trajectories, and more stable training dynamics. Generalization studies and experiments show that STREAM outperforms PPO-based baselines, achieving success rates above 90% in dynamic flows.
           </p>
-          <div class="has-text-centered">
+          <!-- <div class="has-text-centered">
             <img src="static/images/framework_b2.jpg" alt="Example trajectory in cluttered pillar-world environment"/>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@
         <h2 class="title is-3">Framework Overview</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>STREAM</strong> is an end-to-end RL framework for collision-free docking in cluttered and flowing environments. This work consists of three contributions: (i) a RL framework for collision-free underwater docking in cluttered environments with dynamic flows. (ii) a Temporal Dynamics Abstraction (TDA) module that transforms recent proprioceptive states into a compact latent vector, and (iii) a scaleable parallel simulation environment running 2048 agents at above 30,000 frames per second.
+            <strong>STREAM</strong> is an end-to-end RL framework for collision-free docking in cluttered and flowing environments. This work consists of three contributions: (i) a RL framework for underwater docking in cluttered environments with dynamic flows. (ii) a Temporal Dynamics Abstraction (TDA) module that transforms recent proprioceptive states into a compact latent vector, and (iii) a scaleable parallel simulation environment running 2048 agents at above 30,000 frames per second.
           </p>
         <div class="has-text-centered">
             <img src="static/images/framework.jpg" alt="STREAM Framework Overview"/>
@@ -204,7 +204,7 @@
             <img src="static/images/ti.png" alt="TI Environment Trajectories"/>
             <p><em>Docking trajectories in Time-Invariant flow environment with obstacle avoidance</em></p><br>
             <img src="static/images/tv.png" alt="TV Environment Trajectories"/>
-            <p><em>Docking trajectories in Time-Varying flow environment</em></p><br>
+            <p><em>Docking trajectories in Time-Varying flow environment with obstacle avoidance</em></p><br>
           </div>
         </div>
       </div>
@@ -252,7 +252,7 @@
             <img src="static/images/multi_algorithm_trajectories_TI.png" alt="Multi-target TI"/>
             <p><em>Multi-target trajectory comparison in TI environment: STREAM vs baseline</em></p><br>
             <img src="static/images/multi_algorithm_trajectories_TV.png" alt="Multi-target TV"/>
-            <p><em>Multi-target trajectory comparison in TV environment</em></p>
+            <p><em>Multi-target trajectory comparison in TV environment: STREAM vs baseline</em></p>
           </div>
         </div>
       </div>
